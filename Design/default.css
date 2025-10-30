@@ -1,42 +1,67 @@
-/*h2{*/
-/*    font-size: 16px;*/
-/*}*/
-h1{
-    font-family: Titre_Style, Arial, serif;
-    text-align: center;
-    border: 3px black double;
-    border-radius: 10px;
+/* Font import */
+@font-face {
+    font-family: "Titre_Style";
+    src: url("../Police/Doing.ttf");
 }
 
-body{
+/* Global styles */
+body {
     font-family: "Roboto", serif;
-    background: #808080;
+    background: #f4f7f6;
+    text-align: center;
 }
 
-a{
-    text-decoration: none;
+h1 {
+    font-family: "Titre_Style", Arial, serif;
 }
 
-h3{
+h2,
+h3 {
+    font-size: 1.5em;
+}
+
+h3 {
     clear: left;
 }
 
-ul{
-    /*padding: 0;*/
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    font-weight: bold;
+}
+
+li {
+    list-style-type: none;
+}
+
+/* Layout sections */
+header {
+    background: #1d1d1d;
+    color: white;
+}
+
+section.contact {
+    border: 1px solid black;
+    border-radius: 15px;
+}
+
+/* Navigation bar */
+nav {
+    background: white;
+    box-shadow: 0px 3px 1px -1px rgba(0, 0, 0, 0.5);
+    font-size: 1.1em;
+}
+
+/* Footer */
+footer {
+    background: #1d1d1d;
+    color: white;
+    border: 1px solid #1d1d1d;
     text-align: center;
 }
 
-li{
-    list-style-type: none
-}
-
-#logo{
-}
-
-
-footer{
-
-}
-@font-face{
-    font-family: Titre_Style; src: url("../Police/Doing.ttf");
+/* Logo (empty placeholder for now) */
+#logo {
 }
