@@ -34,6 +34,24 @@ h2{
     margin: auto;
 }
 
+span.separator{
+    width: 40px;
+    height: 1px;
+    margin: 15px auto;
+    display: block;
+    background: #999999;
+}
+
+div.contener{
+    width: 80%;
+    margin: auto;
+}
+
+.projet:hover{
+    transition: 500ms;
+    box-shadow: 10px 30px 70px black;
+}
+
 h2,
 h3 {
     font-size: 1.5em;
@@ -47,8 +65,40 @@ a {
     text-decoration: none;
 }
 
+#projets{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.projet{
+    width: 400px;
+    margin: 60px;
+    display: inline-block;
+    background: white;
+    border: 0px white solid;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.projet img{
+    width: 400px;
+    height: 260px;
+    margin-bottom: 15px;
+}
+
+
+.projet span{
+    display: block;
+}
+.date_projet{
+    color: grey;
+    font-size: 0.7em;
+}
 a:hover {
     font-weight: bold;
+    color: black;
 }
 
 li {
@@ -67,7 +117,7 @@ header {
     padding-bottom: 30px;
 }
 
-section.contact {
+div.contact {
     border: 3px solid black;
     border-radius: 15px;
     padding: 30px;
