@@ -1,22 +1,41 @@
 /*h2{*/
 /*    font-size: 16px;*/
 /*}*/
-
 h1{
     font-family: Titre_Style, Arial, serif;
+    text-align: center;
+    border: 3px black double;
+    border-radius: 10px;
 }
 
 body{
     font-family: "Roboto", serif;
+    background: #808080;
 }
 
 a{
     text-decoration: none;
 }
 
+h3{
+    clear: left;
+}
+
+ul{
+    /*padding: 0;*/
+    text-align: center;
+}
+
+li{
+    list-style-type: none
+}
+
+#logo{
+}
+
+
 footer{
-    font-weight: bold;
-    font-style: italic;
+
 }
 @font-face{
     font-family: Titre_Style; src: url("../Police/Doing.ttf");
