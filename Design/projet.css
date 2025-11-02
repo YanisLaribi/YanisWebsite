@@ -1,0 +1,235 @@
+/* =============================
+   BASE – même identité visuelle
+   ============================= */
+
+/* Font import */
+@font-face {
+    font-family: "Titre_Style";
+    src: url("../Police/Doing.ttf");
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Global */
+body {
+    font-family: "Roboto", serif;
+    background: #f4f7f6;
+    text-align: center;
+    color: #111;
+}
+
+/* Headings */
+h1 {
+    font-family: "Titre_Style", Arial, serif;
+    margin: 0;
+    padding: 30px 0 15px;
+}
+
+h2 {
+    font-weight: 400;
+    color: white;
+    margin-bottom: 10px;
+}
+
+span.separator {
+    width: 40px;
+    height: 1px;
+    margin: 15px auto;
+    display: block;
+    background: #999999;
+}
+
+/* =============================
+   HEADER / NAV / FOOTER
+   ============================= */
+
+header {
+    background: #1d1d1d;
+    color: white;
+    padding-bottom: 25px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+}
+
+nav li:hover{
+    font-weight: bolder;
+}
+
+/* Navigation bar */
+nav {
+    background: white;
+    box-shadow: 0px 3px 1px -1px rgba(0, 0, 0, 0.5);
+    font-size: 1.1em;
+    padding: 15px;
+}
+
+ul {
+    padding: 0;
+    display: inline;
+}
+
+nav li {
+    display: inline;
+    margin: 0 4%;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.2em;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav a:hover {
+    color: #555;
+    transform: scale(1.05);
+}
+
+/* =============================
+   CONTAINER ET SECTIONS
+   ============================= */
+
+.contener {
+    width: 80%;
+    margin: 60px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+/* Bloc de base : fond gris ou blanc, même style que les carrés */
+section {
+    background: #666;
+    color: #f4f4f4;
+    border-radius: 25px;
+    padding: 35px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25),
+    0 10px 10px rgba(0,0,0,0.22);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    text-align: left;
+}
+
+section:hover {
+    transform: scale(1.02);
+    box-shadow: 0 18px 35px rgba(0,0,0,0.35),
+    0 12px 14px rgba(0,0,0,0.25);
+}
+
+section h3 {
+    font-family: "Titre_Style", Arial, serif;
+    color: white;
+    font-size: 1.6em;
+    margin-bottom: 15px;
+}
+
+/* Texte défilant si trop long (comme about me carré gris) */
+section p {
+    line-height: 1.7;
+    color: #eee;
+    max-height: 380px;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+/* Scrollbar subtile */
+section p::-webkit-scrollbar {
+    width: 6px;
+}
+section p::-webkit-scrollbar-thumb {
+    background-color: rgba(255,255,255,0.3);
+    border-radius: 3px;
+}
+
+/* =============================
+   PROJECT DISPLAY
+   ============================= */
+
+/* Liste verticale des compétences avec icônes */
+.skills-list {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    width: 200px;
+    margin-top: 15px;
+    padding: 20px;
+}
+
+section.project {
+    background: #111;
+    color: white;
+    text-align: center;
+}
+
+section.project h3 {
+    color: #f4f4f4;
+}
+
+.project img {
+    width: 80%;
+    border-radius: 15px;
+    margin-top: 15px;
+    transition: transform 0.4s ease;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.project img:hover {
+    transform: scale(1.05);
+}
+
+/* =============================
+   CONTACT
+   ============================= */
+
+.contact {
+    text-align: center;
+    border: 2px solid #f4f4f4;
+    border-radius: 15px;
+    padding: 25px;
+    margin-top: 20px;
+    background: rgba(255,255,255,0.1);
+    color: #f4f4f4;
+}
+
+.contact a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.contact a:hover {
+    color: #aaa;
+}
+
+/* =============================
+   FOOTER
+   ============================= */
+
+footer {
+    background: #1d1d1d;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 0.9em;
+    margin-top: 40px;
+}
+
+/* =============================
+   RESPONSIVE DESIGN
+   ============================= */
+
+@media (max-width: 900px) {
+    .contener {
+        width: 90%;
+    }
+
+    section {
+        padding: 25px;
+    }
+
+    .project img {
+        width: 100%;
+    }
+}
+

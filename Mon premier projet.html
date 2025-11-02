@@ -1,45 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Mon premier projet</title>
-        <link rel="stylesheet" type="text/css" href="Design/default.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <title>Quixo – Game Project | Yanis Laribi</title>
+    <link rel="stylesheet" type="text/css" href="Design/projet.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
 <body>
 
-<!--HEADERS-->
+<!-- HEADER -->
 <header>
     <h1>Yanis Laribi</h1>
     <span class="separator"></span>
-    <h2>Mon premier Projet</h2>
+    <h2>Quixo – Python Educational Game</h2>
 </header>
 
-<!--Navigation-->
+<!-- NAVIGATION -->
 <nav>
     <ul>
-        <li><a href="index.html">Acceuil</a></li>
-        <li><a href="#projet">Projets</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#project">Project</a></li>
         <li><a href="#contact">Contact</a></li>
     </ul>
 </nav>
+
 <div class="contener">
-<!-- Sectiom description-->
 
-    <section>
-        <p>Ceci est un projet universitaire de programmation en c++</p>
+    <!-- INTRO / PROJECT OVERVIEW -->
+    <section id="project">
+        <h3>🎯 Project Overview</h3>
+        <p>
+            This project is an educational implementation of the strategic board game <strong>Quixo</strong>,
+            developed in <strong>Python</strong> as part of a university programming assignment.
+            The goal was to apply fundamental programming principles such as modularity, clean code design,
+            and algorithmic logic while creating an interactive, turn-based console game.
+        </p>
     </section>
 
-    <!-- Projects Section -->
+    <!-- OBJECTIVES / DETAILS -->
     <section>
-        <h3>PROJECT</h3>
+        <h3>🧩 Main Objectives</h3>
+        <ul style="text-align: left; display: inline-block;">
+            <li>Implement a fully playable game using <strong>object-oriented programming (OOP)</strong>.</li>
+            <li>Design a clean and reusable code architecture (Game, Player, Board classes).</li>
+            <li>Handle input validation and turn management between two players (human vs. human or AI).</li>
+            <li>Enhance gameplay with a visual grid and user feedback system.</li>
+        </ul>
     </section>
 
-    <!-- Contact Section -->
-    <section class>
-        <h3>CONTACT</h3>
+    <!-- TECHNOLOGIES -->
+    <section>
+        <h3>⚙️ Technologies Used</h3>
+        <div class="skills-list" style="align-items: center;">
+            <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"><span>Python 3</span></div>
+            <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git"><span>Git / GitHub</span></div>
+            <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VSCode"><span>Visual Studio Code</span></div>
+        </div>
+    </section>
+
+    <!-- SCREENSHOTS / MEDIA -->
+    <section>
+        <h3>🖼️ Project Preview</h3>
+        <div id="projets">
+            <div class="projet">
+                <img src="pictures/quixo_menu.png" alt="Quixo Menu Screenshot">
+                <span>Main Menu</span>
+            </div>
+            <div class="projet">
+                <img src="pictures/quixo_gameplay.png" alt="Quixo Gameplay Screenshot">
+                <span>Gameplay Interface</span>
+            </div>
+            <div class="projet">
+                <img src="pictures/quixo_logic.png" alt="Quixo Logic Screenshot">
+                <span>Winning Logic Debug View</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- REFLECTION / CONCLUSION -->
+    <section>
+        <h3>💡 Reflection</h3>
+        <p>
+            This project helped me strengthen my understanding of <strong>OOP concepts</strong> and
+            <strong>algorithmic thinking</strong>. Building Quixo taught me how to manage state transitions
+            and design maintainable code for a turn-based system.
+        </p>
+        <p>
+            If I were to extend it, I’d like to implement a graphical interface using
+            <strong>Tkinter or Pygame</strong> and an AI opponent based on a <strong>minimax algorithm</strong>.
+        </p>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+        <h3>📬 Contact</h3>
         <div class="contact">
             <p>Email me at
                 <a href="mailto:yanislaribi123@gmail.com">yanislaribi123@gmail.com</a>
@@ -49,7 +105,8 @@
 
 </div>
 
-<footer id>
+<!-- FOOTER -->
+<footer>
     <span>2025 &copy; Yanis Laribi</span>
 </footer>
 
