@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bank Account Management | Yanis Laribi</title>
+    <link rel="stylesheet" type="text/css" href="Design/projet.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+    <h1>Yanis Laribi</h1>
+    <span class="separator"></span>
+    <h2>Bank Account Management – C++ OOP Project</h2>
+</header>
+
+<!-- NAVIGATION -->
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#project">Project</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<div class="contener">
+
+    <!-- INTRO / PROJECT OVERVIEW -->
+    <section id="project">
+        <h3>🎯 Project Overview</h3>
+        <p>
+            This project is an <strong>object-oriented C++ application</strong> designed to manage clients
+            and their bank accounts efficiently and securely. It demonstrates principles of OOP, data validation,
+            exception handling, and structured software design for banking systems.
+        </p>
+    </section>
+
+    <!-- OBJECTIVES / DETAILS -->
+    <section>
+        <h3>🧩 Main Features</h3>
+        <ul style="text-align: left; display: inline-block;">
+            <li>Create, manage, and delete clients and their associated accounts.</li>
+            <li>Support multiple account types: <strong>Savings</strong> and <strong>Checking</strong>.</li>
+            <li>Automatically calculate interest based on account type.</li>
+            <li>Validate all user inputs and file formats to ensure data integrity.</li>
+            <li>Use custom exceptions for robust and safe error handling.</li>
+        </ul>
+    </section>
+
+    <!-- ARCHITECTURE -->
+    <section>
+        <h3>🏗️ Project Architecture</h3>
+        <ul style="text-align: left; display: inline-block;">
+            <li><strong>Client:</strong> Manages personal information and the client’s list of accounts.</li>
+            <li><strong>Account (abstract base class):</strong> Provides a foundation for specific account types.</li>
+            <ul>
+                <li><strong>Savings:</strong> Handles standard interest calculation and balance management.</li>
+                <li><strong>Checking:</strong> Manages transaction limits, minimum interest rates, and specific account rules.</li>
+            </ul>
+            <li><strong>Date:</strong> Utility for date management, validation, and formatting.</li>
+            <li><strong>ValidationFormat:</strong> Functions that validate names, dates, phone numbers, and file data.</li>
+            <li><strong>AccountException:</strong> Centralized management of banking-related custom exceptions.</li>
+        </ul>
+    </section>
+
+    <!-- TECHNOLOGIES -->
+    <section>
+        <h3>⚙️ Technologies Used</h3>
+        <div class="skills-list" style="align-items: center;">
+            <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++"><span>C++</span></div>
+            <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git"><span>Git / GitHub</span></div>
+            <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VSCode"><span>Visual Studio Code</span></div>
+        </div>
+    </section>
+
+    <!-- SCREENSHOTS / MEDIA -->
+    <section>
+        <h3>🖼️ Project Preview</h3>
+        <div id="projets">
+            <div class="projet">
+                <img src="pictures/bank_menu.png" alt="Bank System Menu Screenshot">
+                <span>Main Menu</span>
+            </div>
+            <div class="projet">
+                <img src="pictures/bank_clients.png" alt="Client Management Screenshot">
+                <span>Client Management Interface</span>
+            </div>
+            <div class="projet">
+                <img src="pictures/bank_accounts.png" alt="Account Management Screenshot">
+                <span>Account and Interest Calculation View</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- REFLECTION / CONCLUSION -->
+    <section>
+        <h3>💡 Reflection</h3>
+        <p>
+            Through this project, I strengthened my skills in <strong>object-oriented programming</strong>,
+            <strong>data validation</strong>, and <strong>exception handling</strong>. It provided hands-on experience
+            in designing a reliable and extensible system architecture for real-world applications.
+        </p>
+        <p>
+            For future improvements, I plan to integrate a <strong>graphical user interface (GUI)</strong>
+            using Qt or SFML, and possibly add database connectivity for persistent client and account management.
+        </p>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+        <h3>📬 Contact</h3>
+        <div class="contact">
+            <p>Email me at
+                <a href="mailto:yanislaribi123@gmail.com">yanislaribi123@gmail.com</a>
+            </p>
+            <p>Connect with me on
+                <a href="https://www.linkedin.com/in/yanislaribi/" target="_blank">LinkedIn</a>
+                or check my code on
+                <a href="https://github.com/YanisLaribi" target="_blank">GitHub</a>.
+            </p>
+        </div>
+    </section>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <span>2025 &copy; Yanis Laribi</span>
+</footer>
+
+</body>
+</html>
