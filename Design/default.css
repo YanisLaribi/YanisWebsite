@@ -1,45 +1,60 @@
-/* Font import */
+/* =============================
+   FONT IMPORT
+   ============================= */
 @font-face {
     font-family: "Titre_Style";
     src: url("../Police/Doing.ttf");
 }
 
+/* =============================
+   GLOBAL STYLES
+   ============================= */
 * {
     box-sizing: border-box;
 }
 
-/* Global styles */
 body {
     font-family: "Roboto", serif;
     background: #f4f7f6;
     text-align: center;
 }
 
-/* Decorative quotes around h3 */
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    font-weight: bold;
+    color: black;
+}
+
+h1 {
+    font-family: "Titre_Style", Arial, serif;
+    margin-top: 0;
+    padding: 30px 0;
+}
+
+h3 {
+    font-size: 1.5em;
+    clear: left;
+}
+
 h3:before {
     content: "« ";
     color: grey;
 }
+
 h3:after {
     content: " »";
     color: grey;
 }
-
-/* Headings */
-h1 {
-    font-family: "Titre_Style", Arial, serif;
-    margin-top: 0;
-    padding-top: 30px;
-    padding-bottom: 30px;
-}
-
 
 span.separator {
     width: 40px;
     height: 1px;
     margin: 15px auto;
     display: block;
-    background: #999999;
+    background: #999;
 }
 
 div.contener {
@@ -48,64 +63,69 @@ div.contener {
 }
 
 /* =============================
-   SECTION DES CARRÉS (noir & gris)
+   SECTION DES CARRÉS
    ============================= */
-
 .carre {
     display: flex;
-    justify-content: center;  /* centre horizontalement */
-    align-items: center;     /* force la même hauteur pour tous les carrés */
-    gap: 60px;                /* espace entre les carrés */
-    flex-wrap: wrap;          /* empile verticalement sur petit écran */
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    flex-wrap: wrap;
     margin: 60px auto;
 }
 
-/* Carré de base */
 .carre-item {
-    width: 600px;             /* largeur fixe */
-    height: 600px;            /* hauteur fixe : force l'égalité */
+    width: 600px;
+    height: 600px;
     border-radius: 25px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: center;  /* laisse le contenu aligné en haut */
+    align-items: center;
     text-align: center;
     color: white;
     font-family: "Roboto", sans-serif;
     padding: 35px;
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25),
-    0 10px 10px rgba(0,0,0,0.22);
-    transition: transform 0.5s ease, box-shadow 0.5s ease;
     background-size: cover;
     background-position: center;
     overflow: hidden;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25),
+    0 10px 10px rgba(0,0,0,0.22);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 
-
-
-/* Couleurs des deux carrés */
-.carre-item.noir {
-    background: #111;
-}
-
-.hp{
-    display: inline-block;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Effet zoom au survol */
 .carre-item:hover {
     transform: scale(1.05);
     box-shadow: 0 18px 35px rgba(0,0,0,0.35),
     0 12px 14px rgba(0,0,0,0.25);
 }
 
-/* Titres et texte dans les carrés */
+/* Variants */
+.carre-item.noir {
+    background: #111;
+}
+
+.carre-item.gris {
+    background: #666;
+    color: #f0f0f0;
+    padding: 25px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25),
+    0 10px 10px rgba(0,0,0,0.22);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.carre-item.gris:hover {
+    transform: scale(1.03);
+    box-shadow: 0 18px 35px rgba(0,0,0,0.35),
+    0 12px 14px rgba(0,0,0,0.25);
+}
+
+/* Content inside carré */
 .carre-item h3 {
     font-family: "Titre_Style", Arial, serif;
     font-size: 1.8em;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+    color: #f4f4f4;
     border-bottom: 1px solid rgba(255,255,255,0.2);
     padding-bottom: 10px;
     width: 100%;
@@ -118,27 +138,30 @@ div.contener {
     line-height: 1.6;
 }
 
-/* Liste verticale des compétences avec icônes */
+/* =============================
+   SKILLS LIST
+   ============================= */
 .skills-list {
     display: flex;
     flex-direction: column;
     gap: 10px;
     width: 100%;
     margin-top: 15px;
-    overflow-y: auto; /* Permet de scroller si trop de contenu */
+    overflow-y: auto;
     padding-right: 10px;
 }
 
-/* Barre de défilement personnalisée (subtile) */
+/* Scrollbar */
 .skills-list::-webkit-scrollbar {
     width: 6px;
 }
+
 .skills-list::-webkit-scrollbar-thumb {
     background-color: rgba(255,255,255,0.3);
     border-radius: 3px;
 }
 
-/* Élément de compétence */
+/* Skill item */
 .skill {
     display: flex;
     align-items: center;
@@ -152,7 +175,7 @@ div.contener {
 .skill img {
     width: 28px;
     height: 28px;
-    filter: brightness(0) invert(1); /* icônes blanches */
+    filter: brightness(0) invert(1);
     transition: transform 0.3s ease;
 }
 
@@ -162,9 +185,8 @@ div.contener {
     letter-spacing: 0.4px;
 }
 
-/* Effet dynamique au survol */
 .skill:hover {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255,255,255,0.1);
     transform: translateX(6px);
 }
 
@@ -172,104 +194,41 @@ div.contener {
     transform: scale(1.1);
 }
 
-/* About Me section — fond gris comme carré gris */
-/* Carré gris existant */
-.carre-item.gris {
-    background: #666; /* fond gris */
-    color: #f0f0f0;
-    font-family: "Roboto", sans-serif;
-    padding: 25px;
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25),
-    0 10px 10px rgba(0,0,0,0.22);
-    transition: transform 0.5s ease, box-shadow 0.5s ease;
-}
-
-/* Scroll vertical uniquement pour le texte */
+/* =============================
+   ABOUT ME SECTION
+   ============================= */
 .about-text {
     width: 100%;
-    max-height: 500px; /* limite la hauteur pour scroll */
-    overflow-y: auto;  /* scroll uniquement sur Y */
-    overflow-x: hidden; /* pas de débordement horizontal */
+    max-height: 500px;
+    overflow-y: auto;
+    overflow-x: hidden;
     text-align: left;
 }
 
-/* Scrollbar subtile */
+/* Scrollbar */
 .about-text::-webkit-scrollbar {
     width: 6px;
 }
+
 .about-text::-webkit-scrollbar-thumb {
     background-color: rgba(255,255,255,0.3);
     border-radius: 3px;
 }
 
-/* Titres */
-.carre-item h3 {
-    font-family: "Titre_Style", Arial, serif;
-    font-size: 1.8em;
-    margin-bottom: 15px;
-    color: #f4f4f4;
-}
-
-/* Paragraphes */
 .about-text p {
     line-height: 1.6;
     margin-bottom: 15px;
     color: #eee;
 }
 
-/* Humorous line */
 .about-text p:last-child {
     font-style: italic;
     color: #ccc;
 }
 
-/* Hover effect pour le carré */
-.carre-item.gris:hover {
-    transform: scale(1.03);
-    box-shadow: 0 18px 35px rgba(0,0,0,0.35),
-    0 12px 14px rgba(0,0,0,0.25);
-}
-
-
-
 /* =============================
-   SECTION DES PROJETS
+   NAVIGATION / HEADER / FOOTER
    ============================= */
-
-
-h3.contenueG { }
-
-h3 {
-    font-size: 1.5em;
-}
-
-h3 {
-    clear: left;
-}
-
-/* Liens */
-a {
-    text-decoration: none;
-}
-
-a:hover {
-    font-weight: bold;
-    color: black;
-}
-
-/* Liste navigation */
-li {
-    list-style-type: none;
-    display: inline;
-    font-size: 1.3em;
-    color: black;
-    margin: 5%;
-}
-
-/* =============================
-   HEADER / NAV / FOOTER
-   ============================= */
-
 header {
     text-align: center;
     background: #1d1d1d;
@@ -277,10 +236,14 @@ header {
     padding-bottom: 30px;
 }
 
-/* Navigation bar */
+#logo {
+    padding-top: 30px;
+    width: 70px;
+}
+
 nav {
     background: white;
-    box-shadow: 0 3px 1px -1px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 3px 1px -1px rgba(0,0,0,0.5);
     font-size: 1.1em;
     padding: 15px;
 }
@@ -290,12 +253,18 @@ ul {
     display: inline;
 }
 
-/* Contact section */
+li {
+    list-style: none;
+    display: inline;
+    font-size: 1.3em;
+    color: black;
+    margin: 5%;
+}
+
 .contact {
-    border: 0px #666666;
     border-radius: 15px;
     padding: 30px;
-    background: #666666;
+    background: #666;
     text-align: center;
     margin: 20px auto;
 }
@@ -305,7 +274,6 @@ ul {
     margin-bottom: 10px;
 }
 
-/* Footer */
 footer {
     background: #1d1d1d;
     color: white;
@@ -314,16 +282,9 @@ footer {
     padding: 15px;
 }
 
-/* Logo */
-#logo {
-    padding-top: 30px;
-    width: 70px;
-}
-
 /* =============================
-   HIGHLIGHTED / UPCOMING PROJECTS
+   PROJECTS SECTION
    ============================= */
-
 .projects-section {
     text-align: center;
     margin: 80px auto;
@@ -343,7 +304,7 @@ footer {
     margin-top: 40px;
 }
 
-/* Shared project card style (reuse base .projet) */
+/* Project card */
 .projet {
     background: white;
     border-radius: 15px;
@@ -368,7 +329,7 @@ footer {
 }
 
 .projet h3 {
-    margin: 15px 0 5px 0;
+    margin: 15px 0 5px;
     font-size: 1.2em;
     color: #111;
 }
@@ -380,7 +341,7 @@ footer {
     line-height: 1.5;
 }
 
-/* Upcoming projects visual style */
+/* Upcoming project */
 .upcoming-card {
     background: #f4f7f6;
     opacity: 0.9;
@@ -392,7 +353,9 @@ footer {
     transform: scale(1.03);
 }
 
-/* Responsive layout */
+/* =============================
+   RESPONSIVE DESIGN
+   ============================= */
 @media (max-width: 900px) {
     .projets-container {
         flex-direction: column;
@@ -402,4 +365,69 @@ footer {
     .projet {
         width: 90%;
     }
+}
+/* =============================
+   CONTACT SECTION
+   ============================= */
+.contact {
+    max-width: 700px;
+    margin: 60px auto;
+    padding: 40px;
+    background: linear-gradient(135deg, #1d1d1d, #333);
+    color: white;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+    0 10px 10px rgba(0, 0, 0, 0.22);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.35),
+    0 12px 14px rgba(0, 0, 0, 0.25);
+}
+
+.contact h2 {
+    font-family: "Titre_Style", Arial, serif;
+    font-size: 2em;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.contact p {
+    font-size: 1.1em;
+    color: #ddd;
+    margin-bottom: 25px;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.contact-links a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 18px;
+    background: white;
+    color: #111;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.contact-links a:hover {
+    background: #f4f4f4;
+    transform: scale(1.05);
+}
+
+/* Icons inside links */
+.contact-links img {
+    width: 28px;
+    height: 28px;
 }
